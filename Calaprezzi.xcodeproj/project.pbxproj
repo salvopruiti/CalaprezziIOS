@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54F7DF3220CC73F800C55457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF3120CC73F800C55457 /* AppDelegate.swift */; };
+		54F7DF3420CC73F800C55457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF3320CC73F800C55457 /* ViewController.swift */; };
+		54F7DF3720CC73F800C55457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F7DF3520CC73F800C55457 /* Main.storyboard */; };
+		54F7DF3920CC73FD00C55457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F7DF3820CC73FD00C55457 /* Assets.xcassets */; };
+		54F7DF3C20CC73FD00C55457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F7DF3A20CC73FD00C55457 /* LaunchScreen.storyboard */; };
+		54F7DF4720CC73FE00C55457 /* CalaprezziTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF4620CC73FE00C55457 /* CalaprezziTests.swift */; };
+		54F7DF5220CC73FE00C55457 /* CalaprezziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF5120CC73FE00C55457 /* CalaprezziUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54F7DF4320CC73FE00C55457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54F7DF2620CC73F800C55457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54F7DF2D20CC73F800C55457;
+			remoteInfo = Calaprezzi;
+		};
+		54F7DF4E20CC73FE00C55457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54F7DF2620CC73F800C55457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54F7DF2D20CC73F800C55457;
+			remoteInfo = Calaprezzi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54F7DF2E20CC73F800C55457 /* Calaprezzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calaprezzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F7DF3120CC73F800C55457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54F7DF3320CC73F800C55457 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54F7DF3620CC73F800C55457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54F7DF3820CC73FD00C55457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54F7DF3B20CC73FD00C55457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54F7DF3D20CC73FD00C55457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54F7DF4220CC73FE00C55457 /* CalaprezziTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalaprezziTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F7DF4620CC73FE00C55457 /* CalaprezziTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalaprezziTests.swift; sourceTree = "<group>"; };
+		54F7DF4820CC73FE00C55457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54F7DF4D20CC73FE00C55457 /* CalaprezziUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalaprezziUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F7DF5120CC73FE00C55457 /* CalaprezziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalaprezziUITests.swift; sourceTree = "<group>"; };
+		54F7DF5320CC73FE00C55457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54F7DF2B20CC73F800C55457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F7DF3F20CC73FE00C55457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F7DF4A20CC73FE00C55457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54F7DF2520CC73F800C55457 = {
+			isa = PBXGroup;
+			children = (
+				54F7DF3020CC73F800C55457 /* Calaprezzi */,
+				54F7DF4520CC73FE00C55457 /* CalaprezziTests */,
+				54F7DF5020CC73FE00C55457 /* CalaprezziUITests */,
+				54F7DF2F20CC73F800C55457 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54F7DF2F20CC73F800C55457 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54F7DF2E20CC73F800C55457 /* Calaprezzi.app */,
+				54F7DF4220CC73FE00C55457 /* CalaprezziTests.xctest */,
+				54F7DF4D20CC73FE00C55457 /* CalaprezziUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54F7DF3020CC73F800C55457 /* Calaprezzi */ = {
+			isa = PBXGroup;
+			children = (
+				54F7DF3120CC73F800C55457 /* AppDelegate.swift */,
+				54F7DF3320CC73F800C55457 /* ViewController.swift */,
+				54F7DF3520CC73F800C55457 /* Main.storyboard */,
+				54F7DF3820CC73FD00C55457 /* Assets.xcassets */,
+				54F7DF3A20CC73FD00C55457 /* LaunchScreen.storyboard */,
+				54F7DF3D20CC73FD00C55457 /* Info.plist */,
+			);
+			path = Calaprezzi;
+			sourceTree = "<group>";
+		};
+		54F7DF4520CC73FE00C55457 /* CalaprezziTests */ = {
+			isa = PBXGroup;
+			children = (
+				54F7DF4620CC73FE00C55457 /* CalaprezziTests.swift */,
+				54F7DF4820CC73FE00C55457 /* Info.plist */,
+			);
+			path = CalaprezziTests;
+			sourceTree = "<group>";
+		};
+		54F7DF5020CC73FE00C55457 /* CalaprezziUITests */ = {
+			isa = PBXGroup;
+			children = (
+				54F7DF5120CC73FE00C55457 /* CalaprezziUITests.swift */,
+				54F7DF5320CC73FE00C55457 /* Info.plist */,
+			);
+			path = CalaprezziUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54F7DF2D20CC73F800C55457 /* Calaprezzi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54F7DF5620CC73FE00C55457 /* Build configuration list for PBXNativeTarget "Calaprezzi" */;
+			buildPhases = (
+				54F7DF2A20CC73F800C55457 /* Sources */,
+				54F7DF2B20CC73F800C55457 /* Frameworks */,
+				54F7DF2C20CC73F800C55457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calaprezzi;
+			productName = Calaprezzi;
+			productReference = 54F7DF2E20CC73F800C55457 /* Calaprezzi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54F7DF4120CC73FE00C55457 /* CalaprezziTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54F7DF5920CC73FE00C55457 /* Build configuration list for PBXNativeTarget "CalaprezziTests" */;
+			buildPhases = (
+				54F7DF3E20CC73FE00C55457 /* Sources */,
+				54F7DF3F20CC73FE00C55457 /* Frameworks */,
+				54F7DF4020CC73FE00C55457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54F7DF4420CC73FE00C55457 /* PBXTargetDependency */,
+			);
+			name = CalaprezziTests;
+			productName = CalaprezziTests;
+			productReference = 54F7DF4220CC73FE00C55457 /* CalaprezziTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54F7DF4C20CC73FE00C55457 /* CalaprezziUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54F7DF5C20CC73FE00C55457 /* Build configuration list for PBXNativeTarget "CalaprezziUITests" */;
+			buildPhases = (
+				54F7DF4920CC73FE00C55457 /* Sources */,
+				54F7DF4A20CC73FE00C55457 /* Frameworks */,
+				54F7DF4B20CC73FE00C55457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54F7DF4F20CC73FE00C55457 /* PBXTargetDependency */,
+			);
+			name = CalaprezziUITests;
+			productName = CalaprezziUITests;
+			productReference = 54F7DF4D20CC73FE00C55457 /* CalaprezziUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54F7DF2620CC73F800C55457 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Salvatore Pruiti";
+				TargetAttributes = {
+					54F7DF2D20CC73F800C55457 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					54F7DF4120CC73FE00C55457 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 54F7DF2D20CC73F800C55457;
+					};
+					54F7DF4C20CC73FE00C55457 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 54F7DF2D20CC73F800C55457;
+					};
+				};
+			};
+			buildConfigurationList = 54F7DF2920CC73F800C55457 /* Build configuration list for PBXProject "Calaprezzi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54F7DF2520CC73F800C55457;
+			productRefGroup = 54F7DF2F20CC73F800C55457 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54F7DF2D20CC73F800C55457 /* Calaprezzi */,
+				54F7DF4120CC73FE00C55457 /* CalaprezziTests */,
+				54F7DF4C20CC73FE00C55457 /* CalaprezziUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54F7DF2C20CC73F800C55457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F7DF3C20CC73FD00C55457 /* LaunchScreen.storyboard in Resources */,
+				54F7DF3920CC73FD00C55457 /* Assets.xcassets in Resources */,
+				54F7DF3720CC73F800C55457 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F7DF4020CC73FE00C55457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F7DF4B20CC73FE00C55457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54F7DF2A20CC73F800C55457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F7DF3420CC73F800C55457 /* ViewController.swift in Sources */,
+				54F7DF3220CC73F800C55457 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F7DF3E20CC73FE00C55457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F7DF4720CC73FE00C55457 /* CalaprezziTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F7DF4920CC73FE00C55457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F7DF5220CC73FE00C55457 /* CalaprezziUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54F7DF4420CC73FE00C55457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54F7DF2D20CC73F800C55457 /* Calaprezzi */;
+			targetProxy = 54F7DF4320CC73FE00C55457 /* PBXContainerItemProxy */;
+		};
+		54F7DF4F20CC73FE00C55457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54F7DF2D20CC73F800C55457 /* Calaprezzi */;
+			targetProxy = 54F7DF4E20CC73FE00C55457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54F7DF3520CC73F800C55457 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54F7DF3620CC73F800C55457 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		54F7DF3A20CC73FD00C55457 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54F7DF3B20CC73FD00C55457 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54F7DF5420CC73FE00C55457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54F7DF5520CC73FE00C55457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54F7DF5720CC73FE00C55457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Calaprezzi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.Calaprezzi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54F7DF5820CC73FE00C55457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Calaprezzi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.Calaprezzi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		54F7DF5A20CC73FE00C55457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CalaprezziTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.CalaprezziTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calaprezzi.app/Calaprezzi";
+			};
+			name = Debug;
+		};
+		54F7DF5B20CC73FE00C55457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CalaprezziTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.CalaprezziTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calaprezzi.app/Calaprezzi";
+			};
+			name = Release;
+		};
+		54F7DF5D20CC73FE00C55457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CalaprezziUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.CalaprezziUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Calaprezzi;
+			};
+			name = Debug;
+		};
+		54F7DF5E20CC73FE00C55457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CalaprezziUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.CalaprezziUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Calaprezzi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54F7DF2920CC73F800C55457 /* Build configuration list for PBXProject "Calaprezzi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54F7DF5420CC73FE00C55457 /* Debug */,
+				54F7DF5520CC73FE00C55457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54F7DF5620CC73FE00C55457 /* Build configuration list for PBXNativeTarget "Calaprezzi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54F7DF5720CC73FE00C55457 /* Debug */,
+				54F7DF5820CC73FE00C55457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54F7DF5920CC73FE00C55457 /* Build configuration list for PBXNativeTarget "CalaprezziTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54F7DF5A20CC73FE00C55457 /* Debug */,
+				54F7DF5B20CC73FE00C55457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54F7DF5C20CC73FE00C55457 /* Build configuration list for PBXNativeTarget "CalaprezziUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54F7DF5D20CC73FE00C55457 /* Debug */,
+				54F7DF5E20CC73FE00C55457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54F7DF2620CC73F800C55457 /* Project object */;
+}
