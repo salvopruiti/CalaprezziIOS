@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in ScrapingClass.downloadPage(url:):ScrapingClass.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "type(of: jsonObject)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.getPreferences():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "preferences.string(forKey: &quot;alias&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ScrapingClass.extractNumberFromString(_:):ScrapingClass.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "comma.encodedOffset">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ScrapingClass.doScrape(_:buyMarket:sellMarket:):ScrapingClass.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cookies">
+            </PersistentString>
+            <PersistentString
+               value = "request.allHTTPHeaderFields">
+            </PersistentString>
+            <PersistentString
+               value = "httpStatus.allHeaderFields as! [String: String]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.buttonClick(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "matches.range">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ScrapingClass.init():ScrapingClass.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ScrapingClass.changeAddress(_:code:):ScrapingClass.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "networkInfo.currentRadioAccessTechnology">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
