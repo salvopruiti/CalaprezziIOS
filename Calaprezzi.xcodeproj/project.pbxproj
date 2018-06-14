@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059928198093F95A03995A27 /* Pods_CalaprezziUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C584B3B7208CB3B2061493B7 /* Pods_CalaprezziUITests.framework */; };
+		541FC04920D274A6006A93D8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541FC04820D274A6006A93D8 /* Response.swift */; };
+		542CADCB20CEB88C002B60C9 /* ScrapingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542CADCA20CEB88C002B60C9 /* ScrapingClass.swift */; };
+		5494104D20CE65D80039FDDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5494104C20CE65D80039FDDB /* GoogleService-Info.plist */; };
+		5494104E20CE65D80039FDDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5494104C20CE65D80039FDDB /* GoogleService-Info.plist */; };
+		5494104F20CE65D80039FDDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5494104C20CE65D80039FDDB /* GoogleService-Info.plist */; };
+		54C14B6020CFE7EC007C06AE /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B5F20CFE7EC007C06AE /* Market.swift */; };
+		54C14B6220CFF312007C06AE /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6120CFF312007C06AE /* Job.swift */; };
+		54C14B6420D00218007C06AE /* ScrapingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6320D00218007C06AE /* ScrapingResponse.swift */; };
+		54C14B6620D0076C007C06AE /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6520D0076C007C06AE /* ProductData.swift */; };
+		54C14B6820D00C12007C06AE /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6720D00C12007C06AE /* Offer.swift */; };
 		54F7DF3220CC73F800C55457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF3120CC73F800C55457 /* AppDelegate.swift */; };
 		54F7DF3420CC73F800C55457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF3320CC73F800C55457 /* ViewController.swift */; };
 		54F7DF3720CC73F800C55457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F7DF3520CC73F800C55457 /* Main.storyboard */; };
@@ -14,6 +25,9 @@
 		54F7DF3C20CC73FD00C55457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F7DF3A20CC73FD00C55457 /* LaunchScreen.storyboard */; };
 		54F7DF4720CC73FE00C55457 /* CalaprezziTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF4620CC73FE00C55457 /* CalaprezziTests.swift */; };
 		54F7DF5220CC73FE00C55457 /* CalaprezziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF5120CC73FE00C55457 /* CalaprezziUITests.swift */; };
+		54FC99C820D1836500062F10 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC99C720D1836500062F10 /* Extensions.swift */; };
+		A8FF903291DB7FFBBD78E165 /* Pods_CalaprezziTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0437DCB1DD766B05CFC23440 /* Pods_CalaprezziTests.framework */; };
+		D58BDBDEB186604DF9DB602A /* Pods_Calaprezzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE5929710247517EBD324DB /* Pods_Calaprezzi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +48,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0437DCB1DD766B05CFC23440 /* Pods_CalaprezziTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalaprezziTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14CD4425F36023AF4FD42188 /* Pods-CalaprezziUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalaprezziUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalaprezziUITests/Pods-CalaprezziUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25F3074DF6E4FE127FE18FF9 /* Pods-CalaprezziTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalaprezziTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalaprezziTests/Pods-CalaprezziTests.debug.xcconfig"; sourceTree = "<group>"; };
+		541FC04820D274A6006A93D8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		542CADCA20CEB88C002B60C9 /* ScrapingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingClass.swift; sourceTree = "<group>"; };
+		542CADCC20CEBBC7002B60C9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		542CADCD20CEBBC9002B60C9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5494104C20CE65D80039FDDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		54C14B5F20CFE7EC007C06AE /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		54C14B6120CFF312007C06AE /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		54C14B6320D00218007C06AE /* ScrapingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingResponse.swift; sourceTree = "<group>"; };
+		54C14B6520D0076C007C06AE /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
+		54C14B6720D00C12007C06AE /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		54F7DF2E20CC73F800C55457 /* Calaprezzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calaprezzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F7DF3120CC73F800C55457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F7DF3320CC73F800C55457 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +74,14 @@
 		54F7DF4D20CC73FE00C55457 /* CalaprezziUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalaprezziUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F7DF5120CC73FE00C55457 /* CalaprezziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalaprezziUITests.swift; sourceTree = "<group>"; };
 		54F7DF5320CC73FE00C55457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54F8829C20CE7AFD00F498D9 /* Calaprezzi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calaprezzi.entitlements; sourceTree = "<group>"; };
+		54FC99C720D1836500062F10 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6E63050478D001D6342B4A20 /* Pods-Calaprezzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calaprezzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calaprezzi/Pods-Calaprezzi.release.xcconfig"; sourceTree = "<group>"; };
+		81E266BC01E839A3ADB3C3C3 /* Pods-CalaprezziUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalaprezziUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalaprezziUITests/Pods-CalaprezziUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A27297B2DFBF2B46CDE70F00 /* Pods-Calaprezzi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calaprezzi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calaprezzi/Pods-Calaprezzi.debug.xcconfig"; sourceTree = "<group>"; };
+		ACE5929710247517EBD324DB /* Pods_Calaprezzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calaprezzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F3C2677757A7A6305AC5D9 /* Pods-CalaprezziTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalaprezziTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalaprezziTests/Pods-CalaprezziTests.release.xcconfig"; sourceTree = "<group>"; };
+		C584B3B7208CB3B2061493B7 /* Pods_CalaprezziUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalaprezziUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58BDBDEB186604DF9DB602A /* Pods_Calaprezzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FF903291DB7FFBBD78E165 /* Pods_CalaprezziTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +105,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059928198093F95A03995A27 /* Pods_CalaprezziUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8DD8312242C09C9B542336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACE5929710247517EBD324DB /* Pods_Calaprezzi.framework */,
+				0437DCB1DD766B05CFC23440 /* Pods_CalaprezziTests.framework */,
+				C584B3B7208CB3B2061493B7 /* Pods_CalaprezziUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54C14B5E20CFE7C7007C06AE /* models */ = {
+			isa = PBXGroup;
+			children = (
+				54C14B5F20CFE7EC007C06AE /* Market.swift */,
+				541FC04820D274A6006A93D8 /* Response.swift */,
+				54C14B6120CFF312007C06AE /* Job.swift */,
+				54C14B6320D00218007C06AE /* ScrapingResponse.swift */,
+				54C14B6720D00C12007C06AE /* Offer.swift */,
+				54C14B6520D0076C007C06AE /* ProductData.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		54F7DF2520CC73F800C55457 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +142,8 @@
 				54F7DF4520CC73FE00C55457 /* CalaprezziTests */,
 				54F7DF5020CC73FE00C55457 /* CalaprezziUITests */,
 				54F7DF2F20CC73F800C55457 /* Products */,
+				F67EBB1E13193E143D75AEE3 /* Pods */,
+				1F8DD8312242C09C9B542336 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +160,17 @@
 		54F7DF3020CC73F800C55457 /* Calaprezzi */ = {
 			isa = PBXGroup;
 			children = (
+				54C14B5E20CFE7C7007C06AE /* models */,
+				54F8829C20CE7AFD00F498D9 /* Calaprezzi.entitlements */,
+				5494104C20CE65D80039FDDB /* GoogleService-Info.plist */,
 				54F7DF3120CC73F800C55457 /* AppDelegate.swift */,
 				54F7DF3320CC73F800C55457 /* ViewController.swift */,
 				54F7DF3520CC73F800C55457 /* Main.storyboard */,
 				54F7DF3820CC73FD00C55457 /* Assets.xcassets */,
 				54F7DF3A20CC73FD00C55457 /* LaunchScreen.storyboard */,
 				54F7DF3D20CC73FD00C55457 /* Info.plist */,
+				542CADCA20CEB88C002B60C9 /* ScrapingClass.swift */,
+				54FC99C720D1836500062F10 /* Extensions.swift */,
 			);
 			path = Calaprezzi;
 			sourceTree = "<group>";
@@ -125,6 +193,19 @@
 			path = CalaprezziUITests;
 			sourceTree = "<group>";
 		};
+		F67EBB1E13193E143D75AEE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A27297B2DFBF2B46CDE70F00 /* Pods-Calaprezzi.debug.xcconfig */,
+				6E63050478D001D6342B4A20 /* Pods-Calaprezzi.release.xcconfig */,
+				25F3074DF6E4FE127FE18FF9 /* Pods-CalaprezziTests.debug.xcconfig */,
+				B9F3C2677757A7A6305AC5D9 /* Pods-CalaprezziTests.release.xcconfig */,
+				81E266BC01E839A3ADB3C3C3 /* Pods-CalaprezziUITests.debug.xcconfig */,
+				14CD4425F36023AF4FD42188 /* Pods-CalaprezziUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54F7DF5620CC73FE00C55457 /* Build configuration list for PBXNativeTarget "Calaprezzi" */;
 			buildPhases = (
+				596FD1C671C15500B8477C07 /* [CP] Check Pods Manifest.lock */,
 				54F7DF2A20CC73F800C55457 /* Sources */,
 				54F7DF2B20CC73F800C55457 /* Frameworks */,
 				54F7DF2C20CC73F800C55457 /* Resources */,
+				FCE6D914F221719844F72954 /* [CP] Embed Pods Frameworks */,
+				54E363F320CE97330026B0B0 /* Increment Build Number */,
 			);
 			buildRules = (
 			);
@@ -149,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54F7DF5920CC73FE00C55457 /* Build configuration list for PBXNativeTarget "CalaprezziTests" */;
 			buildPhases = (
+				F27725E5A8CEC7340E296A5F /* [CP] Check Pods Manifest.lock */,
 				54F7DF3E20CC73FE00C55457 /* Sources */,
 				54F7DF3F20CC73FE00C55457 /* Frameworks */,
 				54F7DF4020CC73FE00C55457 /* Resources */,
@@ -167,6 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54F7DF5C20CC73FE00C55457 /* Build configuration list for PBXNativeTarget "CalaprezziUITests" */;
 			buildPhases = (
+				774597C031D107F2C3977917 /* [CP] Check Pods Manifest.lock */,
 				54F7DF4920CC73FE00C55457 /* Sources */,
 				54F7DF4A20CC73FE00C55457 /* Frameworks */,
 				54F7DF4B20CC73FE00C55457 /* Resources */,
@@ -193,6 +279,11 @@
 				TargetAttributes = {
 					54F7DF2D20CC73F800C55457 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					54F7DF4120CC73FE00C55457 = {
 						CreatedOnToolsVersion = 9.4;
@@ -230,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F7DF3C20CC73FD00C55457 /* LaunchScreen.storyboard in Resources */,
+				5494104D20CE65D80039FDDB /* GoogleService-Info.plist in Resources */,
 				54F7DF3920CC73FD00C55457 /* Assets.xcassets in Resources */,
 				54F7DF3720CC73F800C55457 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5494104E20CE65D80039FDDB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,18 +339,124 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5494104F20CE65D80039FDDB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54E363F320CE97330026B0B0 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print build_progr\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n\n\nbuildNumber=$(($buildNumber + 1))\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n\n/usr/libexec/PlistBuddy -c \"Set :build_progr $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		596FD1C671C15500B8477C07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calaprezzi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		774597C031D107F2C3977917 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalaprezziUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F27725E5A8CEC7340E296A5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalaprezziTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCE6D914F221719844F72954 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Calaprezzi/Pods-Calaprezzi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calaprezzi/Pods-Calaprezzi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		54F7DF2A20CC73F800C55457 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C14B6820D00C12007C06AE /* Offer.swift in Sources */,
+				54FC99C820D1836500062F10 /* Extensions.swift in Sources */,
+				542CADCB20CEB88C002B60C9 /* ScrapingClass.swift in Sources */,
+				54C14B6620D0076C007C06AE /* ProductData.swift in Sources */,
+				541FC04920D274A6006A93D8 /* Response.swift in Sources */,
+				54C14B6420D00218007C06AE /* ScrapingResponse.swift in Sources */,
 				54F7DF3420CC73F800C55457 /* ViewController.swift in Sources */,
 				54F7DF3220CC73F800C55457 /* AppDelegate.swift in Sources */,
+				54C14B6020CFE7EC007C06AE /* Market.swift in Sources */,
+				54C14B6220CFF312007C06AE /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +496,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54F7DF3620CC73F800C55457 /* Base */,
+				542CADCC20CEBBC7002B60C9 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -305,6 +505,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				54F7DF3B20CC73FD00C55457 /* Base */,
+				542CADCD20CEBBC9002B60C9 /* it */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -376,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -428,16 +631,21 @@
 		};
 		54F7DF5720CC73FE00C55457 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A27297B2DFBF2B46CDE70F00 /* Pods-Calaprezzi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Calaprezzi/Calaprezzi.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Calaprezzi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.Calaprezzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,16 +653,21 @@
 		};
 		54F7DF5820CC73FE00C55457 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E63050478D001D6342B4A20 /* Pods-Calaprezzi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Calaprezzi/Calaprezzi.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Calaprezzi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mediaplanner.Calaprezzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +675,7 @@
 		};
 		54F7DF5A20CC73FE00C55457 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25F3074DF6E4FE127FE18FF9 /* Pods-CalaprezziTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +696,7 @@
 		};
 		54F7DF5B20CC73FE00C55457 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9F3C2677757A7A6305AC5D9 /* Pods-CalaprezziTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +717,7 @@
 		};
 		54F7DF5D20CC73FE00C55457 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E266BC01E839A3ADB3C3C3 /* Pods-CalaprezziUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,6 +737,7 @@
 		};
 		54F7DF5E20CC73FE00C55457 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CD4425F36023AF4FD42188 /* Pods-CalaprezziUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

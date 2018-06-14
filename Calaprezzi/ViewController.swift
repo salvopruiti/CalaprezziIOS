@@ -7,12 +7,44 @@
 //
 
 import UIKit
+import WebKit
+import FirebaseInstanceID
+import FirebaseMessaging
+import SwiftSoup
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
+    
+    var webView : WKWebView!
 
+    @IBOutlet weak var btnScrape: UIButton!
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        
+    }
+
+    @IBAction func buttonClick(_ sender: Any) {
+        
+        var sclass = ScrapingClass()
+        
+        sclass.asin = "B07C21Q43C"
+        
+        sclass.getAsin()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let url = URL(string: "https://app.calaprezzi.it")
+        let request = URLRequest(url: url! as URL)
+
+        webView = WKWebView(frame: self.view.frame)
+        webView.navigationDelegate = self
+        webView.load(request as URLRequest)
+        self.view.addSubview(webView)
+        self.view.sendSubview(toBack: webView)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
