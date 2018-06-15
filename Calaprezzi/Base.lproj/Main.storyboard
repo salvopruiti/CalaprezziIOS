@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,30 +14,128 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calaprezzi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="MainController" id="BYZ-38-t0r" customClass="ViewController" customModule="Calaprezzi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tr-g7-B64" userLabel="Label">
-                                <rect key="frame" x="127" y="615" width="120" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Etichetta"/>
-                                <state key="normal" title="Avvia Scraping"/>
-                                <connections>
-                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="LBE-SI-7zB"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-pE-Ekr">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-kp-qTO" userLabel="Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="Etichetta"/>
+                                        <state key="normal" title="Avvia Scraping"/>
+                                        <connections>
+                                            <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="mHp-7x-LpV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfJ-53-2tv">
+                                        <rect key="frame" x="291" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="Opzioni"/>
+                                        <connections>
+                                            <action selector="optionsclick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lpH-so-j3r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sLP-pE-Ekr" secondAttribute="bottom" constant="16" id="AmH-6N-GZc"/>
+                            <constraint firstItem="sLP-pE-Ekr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JaT-bh-Lpc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sLP-pE-Ekr" secondAttribute="trailing" constant="16" id="XK2-8G-vmD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sLP-pE-Ekr" secondAttribute="trailing" constant="16" id="hSc-a2-1xK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="btnScrape" destination="7tr-g7-B64" id="WHi-lG-fIh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
+        <!--Nuovo Controller-->
+        <scene sceneID="cw6-yx-VjP">
+            <objects>
+                <viewController storyboardIdentifier="NuovoController" id="KAV-hh-Y0F" customClass="NuovoController" customModule="Calaprezzi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gAP-Rc-iB2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZTN-R5-7Rq">
+                                <rect key="frame" x="56" y="66" width="263" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="73M-69-aYu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-JJ-cYO">
+                                <rect key="frame" x="51" y="188" width="273.5" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Benvenuto su CalaPrezzi!">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYO-sv-S9P">
+                                <rect key="frame" x="25" y="217" width="324" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Pv0-22-E5Y"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Per proseguire inserisci il tuo Nome:">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ph-B3-SRr">
+                                <rect key="frame" x="329" y="617" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="saveName:" destination="KAV-hh-Y0F" eventType="primaryActionTriggered" id="vaP-u3-iL6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Inserisci il tuo Nome" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Of-yO-goP">
+                                <rect key="frame" x="40" y="348" width="295" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9ph-B3-SRr" secondAttribute="bottom" constant="20" symbolic="YES" id="2gn-f5-gVK"/>
+                            <constraint firstItem="1Of-yO-goP" firstAttribute="centerX" secondItem="UYO-sv-S9P" secondAttribute="centerX" id="4ns-10-3bt"/>
+                            <constraint firstItem="o1C-JJ-cYO" firstAttribute="top" secondItem="ZTN-R5-7Rq" secondAttribute="bottom" constant="34" id="5Ob-qv-LXm"/>
+                            <constraint firstItem="1Of-yO-goP" firstAttribute="centerX" secondItem="ZTN-R5-7Rq" secondAttribute="centerX" id="Iur-l5-uBc"/>
+                            <constraint firstItem="UYO-sv-S9P" firstAttribute="top" secondItem="o1C-JJ-cYO" secondAttribute="bottom" constant="1" id="KrX-bV-Np6"/>
+                            <constraint firstItem="1Of-yO-goP" firstAttribute="top" secondItem="UYO-sv-S9P" secondAttribute="bottom" constant="35" id="Nho-vq-DXt"/>
+                            <constraint firstItem="ZTN-R5-7Rq" firstAttribute="leading" secondItem="Tx8-of-5bk" secondAttribute="leading" constant="56" id="Scd-gW-MMK"/>
+                            <constraint firstItem="1Of-yO-goP" firstAttribute="centerX" secondItem="gAP-Rc-iB2" secondAttribute="centerX" id="UQC-Si-M1D"/>
+                            <constraint firstItem="9ph-B3-SRr" firstAttribute="trailing" secondItem="gAP-Rc-iB2" secondAttribute="trailingMargin" id="Vzu-wI-fAO"/>
+                            <constraint firstItem="ZTN-R5-7Rq" firstAttribute="top" secondItem="Tx8-of-5bk" secondAttribute="top" constant="46" id="YFh-6C-LVQ"/>
+                            <constraint firstItem="o1C-JJ-cYO" firstAttribute="centerX" secondItem="ZTN-R5-7Rq" secondAttribute="centerX" id="Z2v-T2-hMF"/>
+                            <constraint firstItem="1Of-yO-goP" firstAttribute="leading" secondItem="Tx8-of-5bk" secondAttribute="leading" constant="40" id="ndM-El-PoG"/>
+                            <constraint firstItem="UYO-sv-S9P" firstAttribute="leading" secondItem="Tx8-of-5bk" secondAttribute="leading" constant="25" id="yWD-yC-dc5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tx8-of-5bk"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="1Of-yO-goP" id="aM8-vL-UM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jc7-h3-C4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="32.833583208395808"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="377" height="102"/>
+    </resources>
 </document>

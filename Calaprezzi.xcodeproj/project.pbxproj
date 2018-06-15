@@ -18,6 +18,7 @@
 		54C14B6420D00218007C06AE /* ScrapingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6320D00218007C06AE /* ScrapingResponse.swift */; };
 		54C14B6620D0076C007C06AE /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6520D0076C007C06AE /* ProductData.swift */; };
 		54C14B6820D00C12007C06AE /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C14B6720D00C12007C06AE /* Offer.swift */; };
+		54E6DAE520D3FADD00E437EC /* NuovoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E6DAE420D3FADD00E437EC /* NuovoController.swift */; };
 		54F7DF3220CC73F800C55457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF3120CC73F800C55457 /* AppDelegate.swift */; };
 		54F7DF3420CC73F800C55457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F7DF3320CC73F800C55457 /* ViewController.swift */; };
 		54F7DF3720CC73F800C55457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F7DF3520CC73F800C55457 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		54C14B6320D00218007C06AE /* ScrapingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingResponse.swift; sourceTree = "<group>"; };
 		54C14B6520D0076C007C06AE /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		54C14B6720D00C12007C06AE /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		54E6DAE420D3FADD00E437EC /* NuovoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuovoController.swift; sourceTree = "<group>"; };
 		54F7DF2E20CC73F800C55457 /* Calaprezzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calaprezzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F7DF3120CC73F800C55457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F7DF3320CC73F800C55457 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				54F7DF3D20CC73FD00C55457 /* Info.plist */,
 				542CADCA20CEB88C002B60C9 /* ScrapingClass.swift */,
 				54FC99C720D1836500062F10 /* Extensions.swift */,
+				54E6DAE420D3FADD00E437EC /* NuovoController.swift */,
 			);
 			path = Calaprezzi;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				54F7DF3220CC73F800C55457 /* AppDelegate.swift in Sources */,
 				54C14B6020CFE7EC007C06AE /* Market.swift in Sources */,
 				54C14B6220CFF312007C06AE /* Job.swift in Sources */,
+				54E6DAE520D3FADD00E437EC /* NuovoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

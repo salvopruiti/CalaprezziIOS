@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseMessaging
 import SwiftSoup
+import DeviceKit
 
 enum NotificationType: String {
     case Single = "single"
@@ -24,6 +25,7 @@ class ScrapingClass {
     var asin: String!
     var clientId: String!
     var notificationId: String!
+    var hasError : Bool = false
     
     init() {
         clientId = Messaging.messaging().fcmToken
@@ -56,6 +58,51 @@ class ScrapingClass {
     }
     
     
+    func register() {
+        
+        let url = URL(string: "https://app.calaprezzi.it/register")!
+        let pref = UserDefaults.standard
+        
+        var request = URLRequest(url: url)
+        
+        let device = Device()
+        let model = device.model
+        
+        let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
+        let buildNum = Bundle.main.infoDictionary!["CFBundleVersion"]!
+        let app_version = "\(appVersion) (Build: \(buildNum))"
+        let version = device.systemVersion
+        let alias = pref.string(forKey: "alias")
+        
+        var postData = [String:Any]()
+        
+        postData["alias"] = alias
+        postData["client_type"] = 2
+        postData["unique_id"] = self.clientId
+        postData["device_manufacturer"] = "Apple"
+        postData["device_model"] = device.description
+        postData["os_version"] = version
+        postData["device_product"] = model
+        postData["version"] = app_version
+        
+        request.httpBody = try! JSONSerialization.data(withJSONObject: postData, options: [])
+        request.httpMethod = "POST"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let _ = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(String(describing: response))")
+            }
+            
+        }
+        task.resume()
+    }
+    
     func getAsin() {
         
         let asin = self.asin ?? "asin"
@@ -70,19 +117,30 @@ class ScrapingClass {
         
         let userCountry = UserDefaults.standard.string(forKey: "user_country") ?? "IT"
         let url = URL(string: buyMarket.domain + "/gp/offer-listing/\(asin)/ref=dp_olp_0_ie=UTF8&condition=new")!
-        var cookies = [HTTPCookie]()
+        
         var downloadedBytes: Int64 = 0
         var request = URLRequest(url: url)
         
         if(buyMarket.code.uppercased() == userCountry) {
-            cookies = changeAddress(buyMarket, code: sellMarket.code)!
             
-            request.allHTTPHeaderFields = HTTPCookie.requestHeaderFields(with: cookies)
+            print("Devo Cambiare Indirizzo di Destinazione. Nazione di Acquisto: \(buyMarket.name)")
+            
+            if let cookies = changeAddress(buyMarket, code: sellMarket.code) {
+                
+                request.allHTTPHeaderFields = HTTPCookie.requestHeaderFields(with: cookies)
+                
+            } else {
+                print("Si è verificato un errore")
+                hasError = true
+                return nil
+            }
+            
 
         }
         
-        request.addValue("gzip", forHTTPHeaderField: "Accept-Encoding")
+        request.addValue("gzip, deflate, br", forHTTPHeaderField: "Accept-Encoding")
 
+        print("Scraping Lista Offerte Market di Acquisto (\(buyMarket.name))")
 
         let(data, response , error, _) = URLSession.shared.synchronousDataTask(urlrequest: request)
      
@@ -93,14 +151,17 @@ class ScrapingClass {
             return nil
         }
         
-        guard let httpStatus = response as? HTTPURLResponse else {
+        guard let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 else {
+            
+            print("Si è verificato un errore!")
+            hasError = true
             
             return nil
         }
         
         downloadedBytes += httpStatus.expectedContentLength
         
-        print("Scraping Lista Offerte Market di Acquisto \(buyMarket.name) - Status Code: " + String(httpStatus.statusCode))
+        
      
         if let html = String(data: data!, encoding: .utf8) {
             let offers = parseOfferListingsPage(html, base: url.absoluteString)
@@ -114,6 +175,8 @@ class ScrapingClass {
                 
                 request.url = URL(string: buyMarket.domain + "/dp/\(asin)/?psc=1&m=" + buyOffer.sellerId)
                 
+                print("Scraping Pagina Prodotto, Market di Acquisto (\(buyMarket.name))")
+                
                 let(data, response , error, _) = URLSession.shared.synchronousDataTask(urlrequest: request)
                 
                 guard error == nil || data == nil else {
@@ -122,17 +185,15 @@ class ScrapingClass {
                     return nil
                 }
                 
-                guard let httpStatus = response as? HTTPURLResponse else {
+                guard let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 else {
                     
+                    hasError = true
                     return nil
                 }
                 
                
                 downloadedBytes += httpStatus.expectedContentLength
-                
-                
-                
-                print("Scraping Pagina Prodotto, Market di Acquisto \(buyMarket.name) - Status Code: " + String(httpStatus.statusCode))
+            
                 
                 if let html = String(data: data!, encoding: .utf8) {
                 
@@ -146,6 +207,8 @@ class ScrapingClass {
                     
                     request.addValue("gzip", forHTTPHeaderField: "Accept-Encoding")
                     
+                    print("Scraping Lista Offerte Market di Vendita (\(sellMarket.name))")
+                    
                     let(data, response, error, _) = URLSession.shared.synchronousDataTask(urlrequest: request)
                     
                     guard error == nil || data == nil else {
@@ -154,12 +217,13 @@ class ScrapingClass {
                         return nil
                     }
                     
-                    guard let httpStatus = response as? HTTPURLResponse else {
+                    guard let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 else {
                         
+                        hasError = true
                         return nil
                     }
                     
-                    print("Scraping Lista Offerte Market di Vendita \(sellMarket.name) - Status Code: " + String(httpStatus.statusCode))
+                    
                     
                     
                     downloadedBytes += httpStatus.expectedContentLength
@@ -190,7 +254,12 @@ class ScrapingClass {
         
     }
     
-    
+    func sendErrorResponse() {
+        
+        //TODO
+        
+        
+    }
     
     func downloadPage(url: URL) -> String {
    
@@ -214,7 +283,7 @@ class ScrapingClass {
         
         downloadedBytes += httpResponse.expectedContentLength
         
-        print("DownloadPage - Downloaded Bytes: " + String(downloadedBytes))
+        print("ScrapingJobs Scaricati - Downloaded Bytes: " + String(downloadedBytes))
         
         let decoder = JSONDecoder()
         let jobs = try! decoder.decode([Job].self, from: responseData)
@@ -222,9 +291,13 @@ class ScrapingClass {
         
         jobs.forEach { job in
             
+            print("Categoria: \(job.categoryName)")
+            
             var results: [ScrapingResponse] = [ScrapingResponse]()
             
             job.products.forEach( { product in
+                
+                print("Prodotto da analizzare: \(product.asin)")
                 
                 let buyMarket = self.markets[product.buyMarketId]
                 let sellMarket = self.markets[product.sellMarketId]
@@ -233,6 +306,8 @@ class ScrapingClass {
                    
                     downloadedBytes += Int64(response.downloadedBytes)
                     results.append(response)
+                } else {
+                    print("Si è verificato un errore durante lo Scraping!")
                 }
                 
             })
@@ -241,7 +316,7 @@ class ScrapingClass {
             
             var request: URLRequest
             
-            if(results.count == 0) {
+            if(results.count == 0 && !hasError) {
                 request = URLRequest(url: URL(string: "https://app.calaprezzi.it/scraping/completed")!)
             } else {
                 request = URLRequest(url: URL(string: "https://admin.calaprezzi.it/prodotti/" + job.searchIndex + "/push")!)
@@ -251,7 +326,7 @@ class ScrapingClass {
             
             request.httpMethod = "POST"
             
-            let postData = Response(notificationId: notificationId ?? "", productsCount: job.products.count, productsChecked: results.count, bytesDownloaded: downloadedBytes, has503Error: false, results: results)
+            let postData = Response(notificationId: notificationId ?? "", productsCount: job.products.count, productsChecked: results.count, bytesDownloaded: downloadedBytes, has503Error: hasError, results: results)
             
             
              let encoder = JSONEncoder()
@@ -463,7 +538,11 @@ class ScrapingClass {
         
         if let document = document {
             
-            print(try! document.select("#glow-ingress-block").first()?.text())
+            let destination = try! document.select("#glow-ingress-block").first()?.text()
+            
+            if let destination = destination {
+                print("Destinazione: " + destination)
+            }
 
            
             data.ourPrice = try! document.select("#priceblock_ourprice").first()?.text()

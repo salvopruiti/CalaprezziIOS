@@ -15,25 +15,57 @@ import SwiftSoup
 class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
     
     var webView : WKWebView!
-
+    
+    
+    @IBOutlet weak var stackView: UIStackView!
+    
     @IBOutlet weak var btnScrape: UIButton!
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
     }
 
+    
+    @IBAction func optionsclick(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+         let welcomeController = storyBoard.instantiateViewController(withIdentifier: "NuovoController")
+         
+         self.present(welcomeController, animated: true, completion: nil)
+    }
     @IBAction func buttonClick(_ sender: Any) {
         
-        var sclass = ScrapingClass()
+       
         
-        sclass.asin = "B07C21Q43C"
+        ScrapingClass().getAsin()
         
-        sclass.getAsin()
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+
+        super.viewDidAppear(animated)
+        
+        let prefs = UserDefaults.standard,
+            installed = prefs.bool(forKey: "configurated")
+        
+        guard installed else {
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let welcomeController = storyBoard.instantiateViewController(withIdentifier: "NuovoController")
+            
+            self.present(welcomeController, animated: true, completion: nil)
+            
+            return
+            
+        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         
         let url = URL(string: "https://app.calaprezzi.it")
         let request = URLRequest(url: url! as URL)
@@ -41,6 +73,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         webView = WKWebView(frame: self.view.frame)
         webView.navigationDelegate = self
         webView.load(request as URLRequest)
+
         self.view.addSubview(webView)
         self.view.sendSubview(toBack: webView)
         

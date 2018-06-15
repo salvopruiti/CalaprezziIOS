@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import FirebaseMessaging
 import DeviceKit
-import CoreTelephony
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
@@ -44,16 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        print("Generato Token di Registrazione: \(fcmToken)")
+        print("Token Univoco: \(fcmToken)")
         
-       
+        sendTokenToServer(fcmToken)
+        
+        
+    }
+    
+    func sendTokenToServer(_ fcmToken: String) {
+        
         let url = URL(string: "https://app.calaprezzi.it/register")!
         
         var request = URLRequest(url: url)
         
         let device = Device()
         let model = device.model
-
+        
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
         let buildNum = Bundle.main.infoDictionary!["CFBundleVersion"]!
         let app_version = "\(appVersion) (Build: \(buildNum))"
@@ -75,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         request.httpMethod = "POST"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+            guard let _ = data, error == nil else {                                                 // check for fundamental networking error
                 print("error=\(String(describing: error))")
                 return
             }
@@ -85,11 +90,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
                 print("response = \(String(describing: response))")
             }
             
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(String(describing: responseString))")
         }
         task.resume()
-        
         
     }
     
@@ -122,15 +124,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         var alias: String? = preferences.string(forKey: "alias")
         var userCountry: String? = preferences.string(forKey: "user_country")
         
-        if(alias == nil || userCountry == nil) {
+        if(alias == nil) {
             //todo apro storyboard per inserimento alias
             alias = alias ?? self.alias;
             userCountry = userCountry ?? "IT"
             
             preferences.set(alias, forKey: "alias")
-            preferences.set(true, forKey: "installed")
+            preferences.set(false, forKey: "configurated")
             preferences.set(userCountry, forKey: "user_country")
+        
+
         }
+        
+        //preferences.set(false, forKey: "configurated")
         
         
         self.alias = alias!
