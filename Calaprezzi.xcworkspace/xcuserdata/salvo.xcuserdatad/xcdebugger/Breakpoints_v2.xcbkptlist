@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calaprezzi/ScrapingClass.swift"
-            timestampString = "550834112.976287"
+            timestampString = "550855143.900758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
             landmarkName = "sendErrorResponse()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calaprezzi/Extensions.swift"
-            timestampString = "550674265.963751"
+            timestampString = "550840648.35855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -54,15 +54,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calaprezzi/ScrapingClass.swift"
-            timestampString = "550834112.9770581"
+            timestampString = "550855143.901051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "doScrape(_:buyMarket:sellMarket:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calaprezzi/ScrapingClass.swift"
-            timestampString = "550834112.977528"
+            timestampString = "550855143.901152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "doScrape(_:buyMarket:sellMarket:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getAsin()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

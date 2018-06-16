@@ -16,13 +16,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     
     var webView : WKWebView!
     
-    @IBOutlet weak var stackView: UIStackView!
-    
+    @IBOutlet var topStack: UIStackView!
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
     }
-
     
     @IBAction func optionsclick(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -34,12 +32,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         
         //con asin
         
-        let notificationId : String = UUID().uuidString, asin : String = "asin"
+        let notificationId : String = UUID().uuidString, asin : String = "B01A21IVV6"
         
         ScrapingClass(notificationId, asin: asin).getAsin()
         
         
-       
+
         //senza asin
         //        ScrapingClass().getAsin()
         
@@ -67,11 +65,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
+
         let url = URL(string: "https://app.calaprezzi.it")
         let request = URLRequest(url: url! as URL)
 
@@ -79,10 +73,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         webView.navigationDelegate = self
         webView.load(request as URLRequest)
 
+        
         self.view.addSubview(webView)
+        
+
         self.view.sendSubview(toBack: webView)
         
-        
+        webView.topAnchor.constraint(equalTo: topStack.topAnchor, constant: topStack.frame.size.height + 30)
+
     }
 
     override func didReceiveMemoryWarning() {

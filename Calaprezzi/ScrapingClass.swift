@@ -133,12 +133,15 @@ class ScrapingClass {
         
         var downloadedBytes: Int64 = 0
         var request = URLRequest(url: url)
+        var cookies : [HTTPCookie]? = [HTTPCookie]();
         
         if(buyMarket.code.uppercased() == userCountry) {
             
             print("Devo Cambiare Indirizzo di Destinazione. Nazione di Acquisto: \(buyMarket.name)")
             
-            if let cookies = changeAddress(buyMarket, code: sellMarket.code) {
+            cookies = changeAddress(buyMarket, code: sellMarket.code.uppercased())
+            
+            if let cookies = cookies {
                 
                 request.allHTTPHeaderFields = HTTPCookie.requestHeaderFields(with: cookies)
                 
@@ -151,6 +154,7 @@ class ScrapingClass {
         }
         
         request.addValue("gzip, deflate, br", forHTTPHeaderField: "Accept-Encoding")
+        request.httpShouldHandleCookies = true;
 
         print("Scraping Lista Offerte Market di Acquisto (\(buyMarket.name))")
 
@@ -187,6 +191,15 @@ class ScrapingClass {
                 
                 request.url = URL(string: buyMarket.domain + "/dp/\(asin)/?psc=1&m=" + buyOffer.sellerId)
                 
+                if (cookies?.count)! > 0 {
+                    
+                    request = URLRequest(url: URL(string: buyMarket.domain + "/dp/\(asin)/?psc=1&m=" + buyOffer.sellerId)!)
+                    request.httpShouldHandleCookies = true
+                    request.allHTTPHeaderFields = HTTPCookie.requestHeaderFields(with: cookies!)                
+                    request.addValue("gzip, deflare, br", forHTTPHeaderField: "Accept-Encoding")
+                    
+                }
+                
                 print("Scraping Pagina Prodotto, Market di Acquisto (\(buyMarket.name))")
                 
                 let(data, response , error, _) = URLSession.shared.synchronousDataTask(urlrequest: request)
@@ -205,8 +218,7 @@ class ScrapingClass {
                 
                
                 downloadedBytes += httpStatus.expectedContentLength
-            
-                
+
                 if let html = String(data: data!, encoding: .utf8) {
                 
                     let productData = parseProductPage(html, base: (request.url?.absoluteString)!)
@@ -231,12 +243,10 @@ class ScrapingClass {
                     
                     guard let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 200 else {
                         
+                        print("Si è verificato un errore! (503)")
                         hasError = true
                         return nil
                     }
-                    
-                    
-                    
                     
                     downloadedBytes += httpStatus.expectedContentLength
                     

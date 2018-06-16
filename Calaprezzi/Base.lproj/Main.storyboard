@@ -19,42 +19,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XFv-4C-Njh">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-pE-Ekr">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-pE-Ekr">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="615"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-kp-qTO" userLabel="Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="615"/>
-                                                <accessibility key="accessibilityConfiguration" label="Etichetta"/>
-                                                <state key="normal" title="Avvia Scraping"/>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="mHp-7x-LpV"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfJ-53-2tv">
-                                                <rect key="frame" x="291" y="0.0" width="52" height="615"/>
-                                                <state key="normal" title="Opzioni"/>
-                                                <connections>
-                                                    <action selector="optionsclick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lpH-so-j3r"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-kp-qTO" userLabel="Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="Etichetta"/>
+                                        <state key="normal" title="Avvia Scraping"/>
+                                        <connections>
+                                            <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="mHp-7x-LpV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfJ-53-2tv">
+                                        <rect key="frame" x="291" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="Opzioni"/>
+                                        <connections>
+                                            <action selector="optionsclick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lpH-so-j3r"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="XFv-4C-Njh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IUq-db-6wi"/>
-                            <constraint firstItem="XFv-4C-Njh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="TqP-dV-Eqb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XFv-4C-Njh" secondAttribute="bottom" constant="16" id="lKv-4M-mqe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XFv-4C-Njh" secondAttribute="trailing" constant="16" id="xxo-s3-Rb5"/>
+                            <constraint firstItem="sLP-pE-Ekr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="IDO-4q-XSH"/>
+                            <constraint firstItem="sLP-pE-Ekr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jrw-FY-OEz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sLP-pE-Ekr" secondAttribute="trailing" constant="16" id="oc0-EX-3zf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="stackView" destination="XFv-4C-Njh" id="wfq-b3-kkr"/>
+                        <outlet property="topStack" destination="sLP-pE-Ekr" id="dpi-Za-OFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,7 +70,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-JJ-cYO">
-                                <rect key="frame" x="51" y="188" width="273.5" height="28"/>
+                                <rect key="frame" x="51" y="162" width="273.5" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Benvenuto su CalaPrezzi!">
                                         <attributes>
@@ -87,15 +81,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYO-sv-S9P">
-                                <rect key="frame" x="25" y="217" width="324" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYO-sv-S9P">
+                                <rect key="frame" x="25" y="198" width="324" height="78"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="Pv0-22-E5Y"/>
+                                    <constraint firstAttribute="height" constant="78" id="Pv0-22-E5Y"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Per proseguire inserisci il tuo Nome:">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                            <font key="NSFont" size="22" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -110,7 +104,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Inserisci il tuo Nome" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Of-yO-goP">
-                                <rect key="frame" x="40" y="348" width="295" height="33"/>
+                                <rect key="frame" x="40" y="284" width="295" height="33"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
@@ -120,10 +114,10 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="9ph-B3-SRr" secondAttribute="bottom" constant="20" symbolic="YES" id="2gn-f5-gVK"/>
                             <constraint firstItem="1Of-yO-goP" firstAttribute="centerX" secondItem="UYO-sv-S9P" secondAttribute="centerX" id="4ns-10-3bt"/>
-                            <constraint firstItem="o1C-JJ-cYO" firstAttribute="top" secondItem="ZTN-R5-7Rq" secondAttribute="bottom" constant="34" id="5Ob-qv-LXm"/>
+                            <constraint firstItem="o1C-JJ-cYO" firstAttribute="top" secondItem="ZTN-R5-7Rq" secondAttribute="bottom" constant="8" id="5Ob-qv-LXm"/>
                             <constraint firstItem="1Of-yO-goP" firstAttribute="centerX" secondItem="ZTN-R5-7Rq" secondAttribute="centerX" id="Iur-l5-uBc"/>
-                            <constraint firstItem="UYO-sv-S9P" firstAttribute="top" secondItem="o1C-JJ-cYO" secondAttribute="bottom" constant="1" id="KrX-bV-Np6"/>
-                            <constraint firstItem="1Of-yO-goP" firstAttribute="top" secondItem="UYO-sv-S9P" secondAttribute="bottom" constant="35" id="Nho-vq-DXt"/>
+                            <constraint firstItem="UYO-sv-S9P" firstAttribute="top" secondItem="o1C-JJ-cYO" secondAttribute="bottom" constant="8" id="KrX-bV-Np6"/>
+                            <constraint firstItem="1Of-yO-goP" firstAttribute="top" secondItem="UYO-sv-S9P" secondAttribute="bottom" constant="8" id="Nho-vq-DXt"/>
                             <constraint firstItem="ZTN-R5-7Rq" firstAttribute="leading" secondItem="Tx8-of-5bk" secondAttribute="leading" constant="56" id="Scd-gW-MMK"/>
                             <constraint firstItem="1Of-yO-goP" firstAttribute="centerX" secondItem="gAP-Rc-iB2" secondAttribute="centerX" id="UQC-Si-M1D"/>
                             <constraint firstItem="9ph-B3-SRr" firstAttribute="trailing" secondItem="gAP-Rc-iB2" secondAttribute="trailingMargin" id="Vzu-wI-fAO"/>
