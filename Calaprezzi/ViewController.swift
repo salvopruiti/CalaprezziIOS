@@ -32,9 +32,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     }
     @IBAction func buttonClick(_ sender: Any) {
         
-       
+        //con asin
         
-        ScrapingClass().getAsin()
+        let notificationId : String = UUID().uuidString, asin : String = "asin"
+        
+        ScrapingClass(notificationId, asin: asin).getAsin()
+        
+        
+       
+        //senza asin
+        //        ScrapingClass().getAsin()
         
     }
         

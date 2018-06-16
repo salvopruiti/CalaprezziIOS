@@ -30,9 +30,10 @@ class ScrapingClass {
     var hasError : Bool = false
     
     convenience init(_ notificationId: String, asin: String) {
-        self.init()
-        self.asin = asin
         
+        self.init();
+        self.asin = asin
+        self.notificationId = notificationId
         self.sendConfirmation(NotificationType.Single, notificationId: notificationId)
     }
     
@@ -376,7 +377,7 @@ class ScrapingClass {
         var body = [String: Any]()
         
         body["notification_id"] = notificationId
-        body["notification_type"] = notificationType
+        body["notification_type"] = notificationType.rawValue
         body["client_id"] = clientId
         
         if let theJSONData = try? JSONSerialization.data(
@@ -393,7 +394,7 @@ class ScrapingClass {
             request.httpBody = JSONText.data(using: .utf8);
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                guard let _ = data, error == nil else {                                                 // check for fundamental networking error
                     print("error=\(String(describing: error))")
                     return
                 }
@@ -403,8 +404,8 @@ class ScrapingClass {
                     print("response = \(String(describing: response))")
                 }
                 
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(String(describing: responseString))")
+                //let responseString = String(data: data, encoding: .utf8)
+                //print("responseString = \(String(describing: responseString))")
             }
             task.resume();
         }
