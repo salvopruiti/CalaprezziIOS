@@ -16,10 +16,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
     
     var webView : WKWebView!
     
-    
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBOutlet weak var btnScrape: UIButton!
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         

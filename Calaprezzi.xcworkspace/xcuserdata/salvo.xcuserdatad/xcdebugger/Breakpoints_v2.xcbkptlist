@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calaprezzi/ScrapingClass.swift"
-            timestampString = "550767999.115105"
+            timestampString = "550832737.631523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
-            landmarkName = "doScrape(_:buyMarket:sellMarket:)"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "sendErrorResponse()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Calaprezzi/ScrapingClass.swift"
-            timestampString = "550767999.115199"
+            filePath = "Calaprezzi/WelcomeController.swift"
+            timestampString = "550766107.617599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
-            landmarkName = "downloadPage(url:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calaprezzi/ScrapingClass.swift"
+            timestampString = "550832737.632484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "doScrape(_:buyMarket:sellMarket:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Calaprezzi/WelcomeController.swift"
-            timestampString = "550766107.617599"
+            filePath = "Calaprezzi/ScrapingClass.swift"
+            timestampString = "550832737.633117"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "doScrape(_:buyMarket:sellMarket:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

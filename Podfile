@@ -11,6 +11,8 @@ target 'Calaprezzi' do
   pod 'Firebase/Messaging'
   pod 'DeviceKit', '~> 1.3'
   pod 'SwiftSoup'
+  pod 'ReachabilitySwift'
+  
   
   target 'CalaprezziTests' do
     inherit! :search_paths

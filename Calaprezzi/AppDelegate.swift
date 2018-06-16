@@ -29,8 +29,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         return true
     }
 
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-        print(userInfo)
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        let aps = userInfo["aps"] as! [String: AnyObject]
+        
+        print("Notifica Remota Ricevuta")
+        
+        print(aps);
+        
+        // 1
+        if aps["content-available"] as? Int == 1 {
+            
+            if let asin = aps["asin"] as? String, let notificationId = aps["notification_id"] as? String {
+                
+                ScrapingClass(notificationId, asin: asin).getAsin()
+                
+            }
+            
+            //let podcastStore = PodcastStore.sharedStore
+            // Refresh Podcast
+            // 2
+            //podcastStore.refreshItems { didLoadNewItems in
+                // 3
+              //  completionHandler(didLoadNewItems ? .newData : .noData)
+           // }
+        } else  {
+            // News
+            // 4
+            //_ = NewsItem.makeNewsItem(aps)
+            //completionHandler(.newData)
+        }
+        
+        print(userInfo["aps"]!)
     }
     
     func enableNotifications(_ application: UIApplication) {

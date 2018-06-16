@@ -10,6 +10,8 @@ import Foundation
 import FirebaseMessaging
 import SwiftSoup
 import DeviceKit
+import CoreTelephony
+import Reachability
 
 enum NotificationType: String {
     case Single = "single"
@@ -26,6 +28,13 @@ class ScrapingClass {
     var clientId: String!
     var notificationId: String!
     var hasError : Bool = false
+    
+    convenience init(_ notificationId: String, asin: String) {
+        self.init()
+        self.asin = asin
+        
+        self.sendConfirmation(NotificationType.Single, notificationId: notificationId)
+    }
     
     init() {
         clientId = Messaging.messaging().fcmToken
@@ -52,7 +61,7 @@ class ScrapingClass {
         unavailableStrings["de"] = [
             "Nicht auf Lager",
             "Dieser Artikel ist noch nicht verfügbar",
-            "Derzeit nich auf Lager."
+            "Derzeit nicht auf Lager"
         ]
 
     }
@@ -113,6 +122,9 @@ class ScrapingClass {
     
     func doScrape(_ asin: String, buyMarket: Market, sellMarket: Market) -> ScrapingResponse? {
         
+        
+        let start = DispatchTime.now()
+        
       //prendo il prezzo più basso dal market di acquisto
         
         let userCountry = UserDefaults.standard.string(forKey: "user_country") ?? "IT"
@@ -135,7 +147,6 @@ class ScrapingClass {
                 return nil
             }
             
-
         }
         
         request.addValue("gzip, deflate, br", forHTTPHeaderField: "Accept-Encoding")
@@ -232,7 +243,17 @@ class ScrapingClass {
                         
                         let sellOffers = parseOfferListingsPage(html, base: (request.url?.absoluteString)!)
                         
-                        let scrapingResponse = ScrapingResponse(asin, buy: buyMarket, sell: sellMarket, data: productData, buyOffers: offers, sellOffers: sellOffers, time: 0, length: UInt(downloadedBytes) )
+                        let end = DispatchTime.now()
+                        
+                        let time = Int((end.uptimeNanoseconds - start.uptimeNanoseconds) / 1000000000) //nanosecondi a secondi
+                        
+
+                        let scrapingResponse = ScrapingResponse(asin, buy: buyMarket, sell: sellMarket, data: productData, buyOffers: offers, sellOffers: sellOffers, time: time, length: UInt(downloadedBytes) )
+                        
+                    
+                        
+                        print("Scraping Completato Senza Errori in \(time) secondi")
+                        print(scrapingResponse)
                         
                         return scrapingResponse
                         
@@ -326,7 +347,9 @@ class ScrapingClass {
             
             request.httpMethod = "POST"
             
-            let postData = Response(notificationId: notificationId ?? "", productsCount: job.products.count, productsChecked: results.count, bytesDownloaded: downloadedBytes, has503Error: hasError, results: results)
+            let (networkTypeId, networkTypeName) = self.getNetworkType()
+            
+            let postData = Response(notificationId: notificationId ?? "", productsCount: job.products.count, productsChecked: results.count, bytesDownloaded: downloadedBytes, has503Error: hasError, results: results, networkTypeID: networkTypeId, networkTypeName: networkTypeName)
             
             
              let encoder = JSONEncoder()
@@ -628,6 +651,48 @@ class ScrapingClass {
         
         return data
     
+    }
+    
+    func getNetworkType()-> (networkTypeId: Int, networkTypeName: String) {
+        do {
+            
+            if let reachability = Reachability() {
+                
+                let status = reachability.connection
+        
+                if(status == .none) {
+                    return (-1, "Sconosciuto")
+                }
+                
+                if(status == .wifi) {
+                    return (1, "Wifi")
+                }
+                
+                if(status == .cellular) {
+                    
+                    let networkInfo = CTTelephonyNetworkInfo()
+                    let carrierType = networkInfo.currentRadioAccessTechnology
+                    switch carrierType {
+                        case CTRadioAccessTechnologyGPRS?,CTRadioAccessTechnologyEdge?,CTRadioAccessTechnologyCDMA1x?:
+                            return (0, "Mobile (2G)")
+                        case CTRadioAccessTechnologyWCDMA?,CTRadioAccessTechnologyHSDPA?,CTRadioAccessTechnologyHSUPA?,CTRadioAccessTechnologyCDMAEVDORev0?,CTRadioAccessTechnologyCDMAEVDORevA?,CTRadioAccessTechnologyCDMAEVDORevB?,CTRadioAccessTechnologyeHRPD?:
+                            return (0, "Mobile (3G)")
+                        case CTRadioAccessTechnologyLTE?:
+                            return (0, "Mobile (4G)")
+                        
+                    default:
+                        return(-1, "Sconosciuto")
+                    }
+
+                }
+                
+                
+                
+            }
+            
+        }
+        
+        return (-1, "Sconosciuto")
     }
 }
 

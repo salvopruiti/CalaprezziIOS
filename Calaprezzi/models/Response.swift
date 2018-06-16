@@ -16,6 +16,8 @@ struct Response : Codable {
     var bytesDownloaded : Int64 = 0
     var has503Error : Bool = false
     var results : [ScrapingResponse] = [ScrapingResponse]()
+    var networkTypeID : Int = -1
+    var networkTypeName : String = "Sconosciuto"
     
     enum CodingKeys : String, CodingKey {
         case notificationId = "notification_id"
@@ -24,5 +26,7 @@ struct Response : Codable {
         case bytesDownloaded = "bytes_downloaded"
         case has503Error = "has_503_error"
         case results
+        case networkTypeID = "network_type_id"
+        case networkTypeName = "network_type_name"
     }
 }

@@ -19,35 +19,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-pE-Ekr">
-                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XFv-4C-Njh">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-kp-qTO" userLabel="Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
-                                        <accessibility key="accessibilityConfiguration" label="Etichetta"/>
-                                        <state key="normal" title="Avvia Scraping"/>
-                                        <connections>
-                                            <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="mHp-7x-LpV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfJ-53-2tv">
-                                        <rect key="frame" x="291" y="0.0" width="52" height="30"/>
-                                        <state key="normal" title="Opzioni"/>
-                                        <connections>
-                                            <action selector="optionsclick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lpH-so-j3r"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-pE-Ekr">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="615"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01U-kp-qTO" userLabel="Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="615"/>
+                                                <accessibility key="accessibilityConfiguration" label="Etichetta"/>
+                                                <state key="normal" title="Avvia Scraping"/>
+                                                <connections>
+                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="mHp-7x-LpV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfJ-53-2tv">
+                                                <rect key="frame" x="291" y="0.0" width="52" height="615"/>
+                                                <state key="normal" title="Opzioni"/>
+                                                <connections>
+                                                    <action selector="optionsclick:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lpH-so-j3r"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sLP-pE-Ekr" secondAttribute="bottom" constant="16" id="AmH-6N-GZc"/>
-                            <constraint firstItem="sLP-pE-Ekr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JaT-bh-Lpc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sLP-pE-Ekr" secondAttribute="trailing" constant="16" id="XK2-8G-vmD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sLP-pE-Ekr" secondAttribute="trailing" constant="16" id="hSc-a2-1xK"/>
+                            <constraint firstItem="XFv-4C-Njh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IUq-db-6wi"/>
+                            <constraint firstItem="XFv-4C-Njh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="TqP-dV-Eqb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XFv-4C-Njh" secondAttribute="bottom" constant="16" id="lKv-4M-mqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XFv-4C-Njh" secondAttribute="trailing" constant="16" id="xxo-s3-Rb5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="stackView" destination="XFv-4C-Njh" id="wfq-b3-kkr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
