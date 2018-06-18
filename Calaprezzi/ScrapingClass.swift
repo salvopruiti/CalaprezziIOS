@@ -261,14 +261,10 @@ class ScrapingClass {
 
                         let scrapingResponse = ScrapingResponse(asin, buy: buyMarket, sell: sellMarket, data: productData, buyOffers: offers, sellOffers: sellOffers, time: time, length: UInt(downloadedBytes) )
                         
-                    
                         
                         print("Scraping Completato Senza Errori in \(time) secondi")
-                        print(scrapingResponse)
                         
                         return scrapingResponse
-                        
-                        
                         
                         
                     }

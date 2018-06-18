@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.1 B1</string>
 	<key>CFBundleVersion</key>
-	<string>381</string>
+	<string>383</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -51,6 +51,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>build_progr</key>
-	<integer>381</integer>
+	<integer>383</integer>
 </dict>
 </plist>
